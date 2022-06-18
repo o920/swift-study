@@ -196,3 +196,118 @@ let totalRevenue = revenues.reduce(0) { partialResult, next in
     return partialResult + next
 }
 // reduce(초기값) { revenues[0], revenues[1] ~
+
+
+// 구조체
+struct Album {
+    // 멤버 변수들
+    // stored property
+    let title: String
+    let artist: String
+    var isReleased = false
+    //
+    // 구조체는 초기 생성자를 자동으로 만들어줌, 클래스는 만들어줘야함
+    //    init (title:String, artist:String) {
+    //        self.title = "title"
+    //        self.artist = "artist"
+    //    }
+    func description() -> String {
+        return "\(title) by \(artist)"
+    }
+    //
+    // 구조체 내부 멤버 변수의 값을 변경하는 경우, mutating 키워드 이용
+    mutating func release() {
+        self.isReleased = true
+    }
+}
+var easyOnMe = Album(title: "Easy On Me", artist: "Adele")
+print(easyOnMe.description())
+print(easyOnMe.isReleased)
+easyOnMe.release()
+print(easyOnMe.isReleased)
+//
+struct Phone {
+    var modelName: String
+    var manufacturer: String
+    var version: Double = 1.0
+}
+// 구조체를 복사해서 선언해주는 느낌
+var iPhone1 = Phone(modelName: "iPhone 13", manufacturer: "Apple")
+var iPhone2 = iPhone1
+iPhone2.modelName = "iPhone 14"
+print(iPhone2.modelName)
+print(iPhone1.modelName)
+
+
+// 클래스
+class Employee {
+    var name: String
+    var hours: Int
+    //
+    //생성자 - 없으면 에러남
+    init(name: String, hours: Int) {
+        self.name = name
+        self.hours = hours
+    }
+    //
+    func work() {
+        print("I'm working now...")
+    }
+    //
+    func summary() {
+        print("I work \(self.hours) hours a day. ")
+    }
+}
+//
+// 상속 - override name, hours를 사용할 수 있음
+class iOSDeveloper: Employee {
+    override func work() {
+        print("I'm developing iOS app now.")
+    }
+    override func summary() {
+        print("I work \(self.hours/2) hours a day.")
+    }
+}
+//
+let normalWorker = Employee(name: "Kim", hours: 8)
+normalWorker.work()
+normalWorker.summary()
+//
+let developer = iOSDeveloper(name: "Jason", hours: 8)
+developer.work()
+developer.summary()
+//
+// 클래스는 같은 클래스를 복사하지 않고 포인터로 같은 곳을 가리키고 있음
+var jrDeveloper1 = iOSDeveloper(name: "John", hours: 8)
+var jrDeveloper2 = jrDeveloper1
+jrDeveloper1.name = "Billy"
+print(jrDeveloper1.name)
+print(jrDeveloper2.name)
+
+
+// stored property vs. computed property
+struct Watch {
+    // stored property
+    let model: String
+    let manufacturer: String
+    // computed property
+    var description: String {
+        return "\(model) by \(manufacturer)"
+    }
+}
+//
+struct Person {
+    // stored property
+    let firstName: String
+    let lastName: String
+    // computed property
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+}
+//
+let appleWatch = Watch(model: "Watch 7", manufacturer:  "Apple")
+print(appleWatch.description)
+//
+let jason = Person(firstName: "Jason", lastName: "Lee")
+print(jason.fullName)
