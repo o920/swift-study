@@ -311,3 +311,44 @@ print(appleWatch.description)
 //
 let jason = Person(firstName: "Jason", lastName: "Lee")
 print(jason.fullName)
+
+
+// 프로토콜 : 제공하고 싶은 역할을 미리 정의해놓음
+protocol Coach {
+    var name: String { get set }
+    var currentTeam: String { get }
+    func training()
+    func direct()
+}
+//
+struct Mourinho: Coach {
+    var name: String = "Jose Mourinho"
+    var currentTeam: String = "AS Roma"
+    func training() {
+        print("Traing Player")
+    }
+    func direct() {
+        print("Direct Game")
+    }
+}
+//
+let mourinho = Mourinho()
+print("\(mourinho.name), \( mourinho.currentTeam)")
+mourinho.training()
+mourinho.direct()
+
+
+//익스텐션 : 기존 타입에 새로운 역할을 추가하고 싶을 때 사용
+extension String {
+    func contains(s: String) -> Bool {
+        return self.range(of: s) != nil
+    }
+    //
+    func replace(target: String, with: String) -> String {
+        return self.replacingOccurrences(of: target, with: with)
+    }
+}
+let testString = "Hello iOS Developer!!"
+let replaced = testString.replace(target: "Hello", with: "안녕하세요")
+print(replaced)
+print(testString.contains(s: "iOS"))
