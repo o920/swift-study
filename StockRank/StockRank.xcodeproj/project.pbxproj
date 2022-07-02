@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C3E25B0286FEA6A003CD0C0 /* StockRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3E25AF286FEA6A003CD0C0 /* StockRankViewController.swift */; };
 		944800E2280EE8ED00D7E44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944800E1280EE8ED00D7E44C /* AppDelegate.swift */; };
 		944800E4280EE8ED00D7E44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944800E3280EE8ED00D7E44C /* SceneDelegate.swift */; };
 		944800E9280EE8ED00D7E44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944800E7280EE8ED00D7E44C /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C3E25AF286FEA6A003CD0C0 /* StockRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewController.swift; sourceTree = "<group>"; };
 		944800DE280EE8ED00D7E44C /* StockRank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockRank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		944800E1280EE8ED00D7E44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		944800E3280EE8ED00D7E44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				944800EA280EE8EE00D7E44C /* Assets.xcassets */,
 				944800EC280EE8EE00D7E44C /* LaunchScreen.storyboard */,
 				944800EF280EE8EE00D7E44C /* Info.plist */,
+				8C3E25AF286FEA6A003CD0C0 /* StockRankViewController.swift */,
 			);
 			path = StockRank;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				944800E2280EE8ED00D7E44C /* AppDelegate.swift in Sources */,
 				94480116280EF1E800D7E44C /* StockModel.swift in Sources */,
 				944800E4280EE8ED00D7E44C /* SceneDelegate.swift in Sources */,
+				8C3E25B0286FEA6A003CD0C0 /* StockRankViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
