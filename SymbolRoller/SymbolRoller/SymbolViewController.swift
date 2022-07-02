@@ -19,13 +19,34 @@ class SymbolViewController: UIViewController { // 페이지를 나타내는 하�
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(systemName: "cloud")
+        
+        // TODO :
+        // - symbols에서 하나를 임의로 추출
+        // - 이미지와 텍스트를 설정
+        
+        // 임의로 추출
+        let symbol = symbols.randomElement()!
+        // return type : string
+        
+        // 이미지 설정
+        imageView.image = UIImage(systemName: symbol)
+        
+        // 텍스트 설정
+        label.text = symbol
+        
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    // life cycle : viewdidload - viewwillappear - view didappear
     
 
     @IBAction func buttonClicked(_ sender: Any) {
         print("와 눌렸다")
+        let symbol = symbols.randomElement()!
+        imageView.image = UIImage(systemName: symbol)
+        label.text = symbol
     }
     // Action
     
