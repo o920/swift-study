@@ -101,10 +101,10 @@
 		944800E0280EE8ED00D7E44C /* StockRank */ = {
 			isa = PBXGroup;
 			children = (
-				8C3E2597286FDA4B003CD0C0 /* StockRankViewController.swift */,
 				944800E1280EE8ED00D7E44C /* AppDelegate.swift */,
 				944800E3280EE8ED00D7E44C /* SceneDelegate.swift */,
 				94480115280EF1E800D7E44C /* StockModel.swift */,
+				8C3E2597286FDA4B003CD0C0 /* StockRankViewController.swift */,
 				944800E7280EE8ED00D7E44C /* Main.storyboard */,
 				944800EA280EE8EE00D7E44C /* Assets.xcassets */,
 				944800EC280EE8EE00D7E44C /* LaunchScreen.storyboard */,
