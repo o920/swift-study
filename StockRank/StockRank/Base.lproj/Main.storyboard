@@ -92,12 +92,19 @@
                                                 <constraint firstItem="4rA-zc-mrA" firstAttribute="top" secondItem="okd-K6-n43" secondAttribute="top" id="mvJ-j1-sZV"/>
                                                 <constraint firstAttribute="trailing" secondItem="edK-dK-KVH" secondAttribute="trailing" constant="20" id="nKd-T3-CCj"/>
                                                 <constraint firstItem="4rA-zc-mrA" firstAttribute="centerY" secondItem="a7g-XB-Zmg" secondAttribute="centerY" id="qeu-MA-mhN"/>
-                                                <constraint firstItem="4rA-zc-mrA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a7g-XB-Zmg" secondAttribute="trailing" symbolic="YES" id="wwa-eH-qdC"/>
+                                                <constraint firstItem="4rA-zc-mrA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a7g-XB-Zmg" secondAttribute="trailing" constant="8" symbolic="YES" id="wwa-eH-qdC"/>
                                                 <constraint firstItem="BYt-O2-8h5" firstAttribute="leading" secondItem="okd-K6-n43" secondAttribute="leading" id="zfc-u6-prz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="414" height="128"/>
+                                        <connections>
+                                            <outlet property="CI" destination="4rA-zc-mrA" id="p6a-JX-4ok"/>
+                                            <outlet property="companyNameLabel" destination="okd-K6-n43" id="rtR-UZ-EjG"/>
+                                            <outlet property="companyPriceLabel" destination="59b-7n-R11" id="Pc2-ag-ken"/>
+                                            <outlet property="diffLabel" destination="59b-7n-R11" id="XEe-QJ-0fx"/>
+                                            <outlet property="rankLabel" destination="a7g-XB-Zmg" id="TU8-DH-JPJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
