@@ -21,13 +21,14 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VA9-Xk-qEs">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="638"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKu-yO-ZNN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKu-yO-ZNN">
                                         <rect key="frame" x="0.0" y="638" width="414" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="v4n-gk-7g2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -37,7 +38,9 @@
                                             <constraint firstAttribute="height" constant="80" id="Vje-f2-izZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrow.3.trianglepath" catalog="system" title="Reload" subtitle="click me to reload" imagePadding="10" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75t-e7-pdc"/>
                                         </connections>
@@ -68,6 +71,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.3.trianglepath" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
