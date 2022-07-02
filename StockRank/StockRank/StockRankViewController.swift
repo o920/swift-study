@@ -37,14 +37,17 @@ extension StockRankViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        // reuse cell for len of stockList
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath)
         
         return cell
     }
-    
-    
 }
 
 extension StockRankViewController: UICollectionViewDelegateFlowLayout {
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // width == collectionView - single column
+        // 80
+        return CGSize(width: collectionView.bounds.width, height : 80)
+    }
 }
